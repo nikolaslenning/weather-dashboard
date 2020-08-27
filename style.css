@@ -1,0 +1,23 @@
+.uvIndexGreen {
+    background-color: green;
+    width: 100px;
+    border-radius: 50px;
+    
+}
+
+.uvIndexYellow {
+    background-color: yellow;
+    width: 100px;
+    border-radius: 50px;
+    
+}
+.uvIndexOrange {
+    background-color: orange;
+    width: 100px;
+    border-radius: 50px;
+}
+.uvIndexRed {
+    background-color: red;
+    width: 100px;
+    border-radius: 50px;
+}
