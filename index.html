@@ -4,15 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
-    <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
-
-
-
-
     <title>Document</title>
 </head>
 
@@ -20,23 +14,26 @@
     <div class="card">
         <h1 class="card-header text-center bg-dark text-light">Weather Dashboard</h1>
     </div>
-    <p class="mb-0 font-weight-bold col-3">Search for a City:</p>
 
+    <div class='row h-100'>
+        <div class="col-4">
+            <p class="mb-0 font-weight-bold">Search for a City:</p>
 
-    <div class='row'>
-        <div class="col-2">
             <form class="form-inline ml-2">
-                <input id="city-input" class="form-control mr-sm-2 pl-2" type="search" placeholder="Search"
+                <input id="city-input" class="searchBar form-control mr-sm-2 pl-2" type="search" placeholder="Search"
                     aria-label="Search">
                 <button id="submit-btn" class="btn btn-primary my-2 my-sm-0" type="submit">
                     <span class="fa fa-search"></span></button>
             </form>
+            <div class="card" style="width: 18rem;">
+                <ul id='daily-weather-list' class="list-group list-group-flush"></ul>
+            </div>
         </div>
 
-        <div class="card col-10">
+        <div class="card col-7">
             <div class='card-body'>
                 <div class='row'>
-                    <h5 class="col-3" id="city"></h5>
+                    <h4 id="city"></h4>
                     <img id=image></img>
                 </div>
                 <p id="temp"></p>
@@ -45,12 +42,13 @@
                 <p id="UVIndex"></p>
             </div>
         </div>
+    </div> 
+    
+    <div class="row"></div>
+    <div class='forecastContainer col-8 float-right'>
+        <h5>5-Day forecast:</h5>
+        <div id='five-day-forecast' class="row justify-content-between"></div>
     </div>
-
-
-
-
-
 
     <script src="https://code.jquery.com/jquery-3.5.1.js"
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
@@ -63,5 +61,4 @@
     <script src=index.js></script>
 
 </body>
-
 </html>
